@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
+    color: #e6edf3;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: #161b22;
+    padding: 40px;
+    border-radius: 24px;
+    border: 1px solid #30363d;
+    max-width: 550px;
+    width: 100%;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 28px;
+    background: linear-gradient(135deg, #58a6ff, #3fb950);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 8px;
+}
+
+p {
+    color: #8b949e;
+    font-size: 14px;
+}
+
+.upload-box {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.file-input-wrapper {
+    background: #0d1117;
+    padding: 20px;
+    border-radius: 12px;
+    border: 2px dashed #30363d;
+    text-align: center;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.file-input-wrapper:hover {
+    border-color: #58a6ff;
+    background: #0d1117;
+}
+
+.file-label {
+    display: inline-block;
+    padding: 8px 20px;
+    background: #21262d;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    color: #58a6ff;
+    transition: 0.3s;
+}
+
+.file-label:hover {
+    background: #30363d;
+}
+
+.file-input {
+    display: none;
+}
+
+#fileName {
+    display: block;
+    margin-top: 10px;
+    color: #8b949e;
+    font-size: 14px;
+}
+
+.repo-input {
+    padding: 14px;
+    border-radius: 10px;
+    border: 1px solid #30363d;
+    background: #0d1117;
+    color: #e6edf3;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.repo-input:focus {
+    outline: none;
+    border-color: #58a6ff;
+    box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.1);
+}
+
+.options {
+    display: flex;
+    gap: 20px;
+    color: #8b949e;
+    font-size: 14px;
+}
+
+.options label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.options input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #58a6ff;
+    cursor: pointer;
+}
+
+#uploadBtn {
+    padding: 16px;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(135deg, #238636, #2ea043);
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#uploadBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(46, 160, 67, 0.3);
+}
+
+#uploadBtn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.progress {
+    margin: 15px 0;
+    background: #21262d;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    height: 30px;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #58a6ff, #3fb950);
+    transition: width 0.5s ease;
+    width: 0%;
+}
+
+#progressText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+    font-weight: 600;
+    color: #e6edf3;
+}
+
+.status {
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 10px;
+    text-align: center;
+    background: #21262d;
+    min-height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.result {
+    margin-top: 12px;
+    padding: 15px;
+    border-radius: 10px;
+    background: #0d1117;
+    border: 1px solid #30363d;
+    text-align: center;
+    word-break: break-all;
+}
+
+.result a {
+    color: #58a6ff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.result a:hover {
+    text-decoration: underline;
+}
+
+.success { color: #3fb950; }
+.error { color: #f85149; }
+.loading { color: #58a6ff; }
+
+@media (max-width: 480px) {
+    .container { padding: 20px; }
+    h1 { font-size: 22px; }
+  }
