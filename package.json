@@ -1,0 +1,9 @@
+{
+  "name": "zip-to-github-netlify",
+  "version": "1.0.0",
+  "description": "Upload ZIP to auto-create GitHub repo on Netlify",
+  "dependencies": {
+    "@octokit/rest": "^20.0.2",
+    "jszip": "^3.10.1"
+  }
+}
