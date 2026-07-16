@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZIP to GitHub - NIMA DEV</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📦 ZIP Uploader</h1>
+            <p style="color: #58a6ff;">NIMA DEV - Auto GitHub Repo Creator</p>
+        </div>
+        
+        <div class="upload-box">
+            <div class="file-input-wrapper">
+                <label for="zipFile" class="file-label">📁 ZIP එක තෝරන්න</label>
+                <input type="file" id="zipFile" accept=".zip" class="file-input">
+                <span id="fileName">ගොනුවක් තෝරා නැත</span>
+            </div>
+            
+            <input type="text" id="repoName" placeholder="Repo එකේ නම (විකල්ප)" class="repo-input">
+            
+            <div class="options">
+                <label>
+                    <input type="checkbox" id="extractFiles" checked>
+                    ZIP එක Extract කර ගොනු විදියට Push කරන්න
+                </label>
+            </div>
+            
+            <button onclick="uploadAndCreate()" id="uploadBtn">
+                🚀 Upload & Create Repo
+            </button>
+        </div>
+        
+        <div id="progress" class="progress" style="display:none;">
+            <div class="progress-bar"></div>
+            <span id="progressText">0%</span>
+        </div>
+        
+        <div id="status" class="status"></div>
+        <div id="result" class="result"></div>
+        
+        <div style="margin-top: 20px; text-align: center; color: #8b949e; font-size: 12px;">
+            Made with ❤️ by NIMA DEV
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
